@@ -1015,7 +1015,6 @@ angular_multi_select.directive('angularMultiSelect',
 			$scope.$watch('searchInput.value', function(_new, _old) {
 				if(!angular.equals(_new, _old)) {
 					if(_new.length > attrs.minSearchLength || (_new.length < _old.length && _old.length >= 0) ) {
-						$scope.kbFocusIndex = null;
 						$scope.fillFilteredModel();
 					}
 
